@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--footer-background-color);
+
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer-global {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__sections {
+  flex-grow: 1;
+  &:nth-child(2n) {
+    margin-left: 70px;
+    margin-right: 93px;
+  }
+}
+
+.footer__text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--text-color-white);
+  margin-bottom: 20px;
+}
