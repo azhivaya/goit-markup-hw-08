@@ -1,6 +1,12 @@
 .work {
-  display: flex;
-  align-items: center;
+  @media (max-width: 1199px) {
+    display: none;
+  }
+
+  @media (min-width: 1200px) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .work__item {

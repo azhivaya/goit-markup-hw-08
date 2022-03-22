@@ -20,8 +20,10 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <div class="container header__container">
-        <a href="" class="logo">Web<span class="logo--light">Studio</span></a>
+      <div class="container header__container"> 
+        
+        <a href="" class="logo">Web<span class="logo--light">Studio</span></a> 
+        
         <nav class="site-nav">
           <ul class="site-nav__list">
             <li class="site-nav__item">
@@ -51,12 +53,57 @@
             </a>
           </li>
         </ul>
-      </div>
+
+        <!-- <button class="menu-btn is-open" type="button" aria-expanded="false" aria-controls="mobile-menu-container" data-menu-button>  -->
+            
+        <!-- <svg width="40" height="40" aria-label="Переключатель моб меню">
+            <use class="menu-btn__icon-close" href="./images/icons.svg#close"></use>
+            <use class="menu-btn__icon-menu" href="./images/icons.svg#menu"></use>
+          </svg>
+          </button> -->
+
+          <button class="menu-open-btn" type="button"><svg width="40" height="40" aria-label="Переключатель моб меню">
+            <use class="menu-btn__icon-menu" href="./images/icons.svg#menu"></use>
+          </svg></button>
+
+          <div class="mobile-menu-container" id="mobile-menu-container" data-menu>
+            <button class="menu-close-btn" type="button"><svg width="40" height="40" aria-label="Переключатель моб меню">
+            <use class="menu-btn__icon-close" href="./images/icons.svg#menu"></use>
+          </svg></button>
+            <ul class="mobile-menu">
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link mobile-menu__link--current">Студия</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфолио</a>
+            </li>
+            <li class="mobile-menu__item"><a href="" class="mobile-menu__link">Контакты</a></li>
+          </ul>
+        </nav>
+        <ul class="mobile-contact">
+           <li class="mobile-contact__item">
+            <a href="tel:+380961111111" class="mobile-contact__link">
+              +38 096 111 11 11
+            </a>
+          <li class="mobile-contact__item">
+            <a href="mailto:info@devstudio.com" class="mobile-contact__link">
+              info@devstudio.com
+            </a>
+          </li>
+          </li>
+        </ul>
+        <ul class="mobile-menu-socials">
+          <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="https://www.instagram.com">Instagram</a></li>
+          <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="https://twitter.com/" >Twitter</a></li>
+          <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="https://facebook.com/" >Facebook</a></li>
+          <li class="mobile-menu-socials__item"><a class="mobile-menu-socials__link" href="https://linkedin.com/" >LinkedIn</a></li>
+        </ul></div>
+        </div>
     </header>
     <!-- Main -->
     <main>
       <!--Hero section-->
-      <section class="hero">
+      <section class="section hero">
         <div class="container">
           <h1 class="hero__title">
             Эффективные решения<br />
@@ -117,15 +164,21 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="work">
             <li class="work__item">
-              <img src="./images/img-what-we-do-1.jpg" alt="написание кода" width="370" />
+              <picture>
+  <source srcset="./images/work/work-1-@1x.jpg 1x, ./images/work/work-1-@2x.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/work/work-1.jpg" alt="написание кода"  /></picture>
               <p class="work__text">Десктопные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/img-what-we-do-2.jpg" alt="адаптивный интерфейс" width="370" />
+              <picture>
+  <source srcset="./images/work/work-2-@1x.jpg 1x, ./images/work/work-2-@2x.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/work/work-2.jpg" alt="адаптивный интерфейс" /> </picture>
               <p class="work__text">Мобильные приложения</p>
             </li>
             <li class="work__item">
-              <img src="./images/img-what-we-do-3.jpg" alt="цветовая палитра" width="370" />
+              <picture>
+  <source srcset="./images/work/work-3-@1x.jpg 1x, ./images/work/work-3-@2x.jpg 2x" media="(min-width: 1200px)" />
+              <img src="./images/work/work-3.jpg" alt="цветовая палитра" /></picture>
               <p class="work__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -137,11 +190,17 @@
           <h2 class="section__title">Наша команда</h2>
           <ul class="team">
             <li class="team__item">
-              <img
-                src="./images/member-1.jpg"
+              <picture>
+  <source srcset="./images/team/member-1-desk-@1x.jpg 1x, ./images/team/member-1-desk-@2x.jpg 2x" media="(min-width: 1200px)" />
+  <source srcset="./images/team/member-1-tab-@1x.jpg 1x, ./images/team/member-1-tab-@2x.jpg 2x" media="(min-width: 768px)" />  
+  <source srcset="./images/team/member-1-mob-@1x.jpg 1x, ./images/team/member-1-mob-@2x.jpg 2x" media="(max-width: 767px)" />  
+
+ <img
+                src="./images/team/member-1.jpg"
                 alt="Игорь Демьяненко продакт менеджер"
-                width="270"
               />
+</picture>
+              
               <div class="team__card">
                 <h3 class="team__title">Игорь Демьяненко</h3>
                 <p class="team__text" lang="en" >Product Designer</p>
@@ -162,11 +221,16 @@
               </div>
             </li>
             <li class="team__item">
+              <picture>
+  <source srcset="./images/team/member-2-desk-@1x.jpg 1x, ./images/team/member-2-desk-@2x.jpg 2x" media="(min-width: 1200px)" />
+ <source srcset="./images/team/member-2-tab-@1x.jpg 1x, ./images/team/member-2-tab-@2x.jpg 2x" media="(min-width: 768px)" />  
+  <source srcset="./images/team/member-2-mob-@1x.jpg 1x, ./images/team/member-2-mob-@2x.jpg 2x" media="(max-width: 767px)" />  
+
               <img
-                src="./images/member-2.jpg"
+                src="./images/team/member-2.jpg"
                 alt="Ольга Репина фронтэнд разработчик"
-                width="270"
               />
+              </picture>
               <div class="team__card">
                 <h3 class="team__title">Ольга Репина</h3>
                 <p class="team__text" lang="en">Frontend Developer</p>
@@ -187,7 +251,11 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/member-3.jpg" alt="Николай Тарасов маркетинг" width="270" />
+              <picture>
+  <source srcset="./images/team/member-3-desk-@1x.jpg 1x, ./images/team/member-3-desk-@2x.jpg 2x" media="(min-width: 1200px)" />
+ <source srcset="./images/team/member-3-tab-@1x.jpg 1x, ./images/team/member-3-tab-@2x.jpg 2x" media="(min-width: 768px)" />  
+  <source srcset="./images/team/member-3-mob-@1x.jpg 1x, ./images/team/member-3-mob-@2x.jpg 2x" media="(max-width: 767px)" /> 
+              <img src="./images/team/member-3.jpg" alt="Николай Тарасов маркетинг" /></picture>
               <div class="team__card">
                 <h3 class="team__title">Николай Тарасов</h3>
                 <p class="team__text" lang="en">Marketing</p>
@@ -208,7 +276,11 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./images/member-4.jpg" alt="Михаил Ермаков дизайнер" width="270" />
+              <picture>
+  <source srcset="./images/team/member-4-desk-@1x.jpg 1x, ./images/team/member-4-desk-@2x.jpg 2x" media="(min-width: 1200px)" />
+ <source srcset="./images/team/member-4-tab-@1x.jpg 1x, ./images/team/member-4-tab-@2x.jpg 2x" media="(min-width: 768px)" />  
+  <source srcset="./images/team/member-4-mob-@1x.jpg 1x, ./images/team/member-4-mob-@2x.jpg 2x" media="(max-width: 767px)" /> 
+              <img src="./images/team/member-4.jpg" alt="Михаил Ермаков дизайнер" /></picture>
               <div class="team__card">
                 <h3 class="team__title">Михаил Ермаков</h3>
                 <p class="team__text" lang="en">UI Designer</p>
@@ -259,7 +331,7 @@
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="container footer-global">
+      <div class="container footer-container">
         <div class="footer__sections">
         <a class="logo" href="">Web<span class="logo--dark">Studio</span></a>
         <address class="address">
@@ -314,7 +386,7 @@
           </a>
         </li>
         </ul>
-      </div>
+        </div>
       <div class="footer__sections">
         <p class="footer__text">Подпишитесь на рассылку</p>
         <form class="subscribe-form">
@@ -362,7 +434,8 @@
               </div>
                   <div class="form__field">
                 <label class="form__label" for="comment" >Комментарий</label>
-                <textarea class="form__comment" name="comment" id="comment" placeholder="Введите текст"></textarea></div>
+                <textarea class="form__comment" name="comment" id="comment" placeholder="Введите текст"></textarea>
+              </div>
 
               <div class="form__field checkbox">
                 <input 
@@ -373,12 +446,14 @@
                 <label class="checkbox__text" for="checkbox__input">
                   <span class="checkbox__span"><svg class="checkbox__icon"  width="16" height="15">
                   <use href="./images/icons.svg#icon-check"></use>
-                </svg></span>Соглашаюсь с рассылкой и принимаю <a href="" class="checkbox__conditions">Условия договора</a></label>
+                </svg></span>Соглашаюсь с рассылкой и принимаю&nbsp;<a href="" class="checkbox__conditions">Условия договора</a></label>
                 <button class="button btn" type="submit">Отправить</button>
               </div>
               </form>
             </div>
           </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+
   </body>
 </html>

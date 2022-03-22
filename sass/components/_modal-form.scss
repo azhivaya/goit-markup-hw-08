@@ -89,21 +89,24 @@
 
   font-size: 14px;
   line-height: 1.7;
+
+  @media screen and (max-width: 1199px) {
+    font-size: 12px;
+    line-height: calc(14 / 12);
+  }
 }
 
 .checkbox__conditions {
   color: var(--accent-color);
   text-decoration: underline;
-  padding-left: 3px;
 }
 
 .checkbox__span {
-  margin-right: 8px;
-
   width: 16px;
   height: 15px;
   border: 2px solid var(--header-logo);
   border-radius: 2px;
+  margin-right: 3px;
 }
 
 .checkbox__icon {

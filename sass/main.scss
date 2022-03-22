@@ -4,7 +4,8 @@
 
 @import './components/header';
 @import './components/logo';
-@import './components/main-nav';
+@import './components/header-container';
+@import './components/mobile-menu';
 @import './components/site-nav';
 @import './components/contact-nav';
 
@@ -22,7 +23,7 @@
 @import './components/footer-address';
 @import './components/subscribe';
 
-@import './components/portfolio';
+@import './components/filters';
 @import './components/card-set';
 
 @import './components/modal';
