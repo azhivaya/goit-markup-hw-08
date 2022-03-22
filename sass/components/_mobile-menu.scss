@@ -22,65 +22,68 @@
     display: none;
   }
 }
-.menu-btn--open {
-  display: block;
-  margin-left: auto;
-  border: none;
-  background-color: transparent;
-
-  @media screen and (min-width: 768px) {
-    display: none;
-  }
-}
-
-.menu-btn--close {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  display: flex;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-}
-
-// .menu-btn {
-//   // position: absolute;
-//   // top: 10px;
-//   // right: 15px;
-//   // display: flex;
-//   // margin: 0;
-//   // padding: 0;
-//   display: inline-flex;
+// .menu-btn--open {
+//   display: block;
+//   margin: 0;
 //   padding: 0;
 //   margin-left: auto;
-//   // margin-top: 10px;
 //   border: none;
 //   background-color: transparent;
+
 //   @media screen and (min-width: 768px) {
 //     display: none;
 //   }
 // }
 
-// .menu-btn .menu-btn__icon-close {
-//   display: none;
+// .menu-btn--close {
+//   position: absolute;
+//   top: 10px;
+//   right: 15px;
+//   display: flex;
+//   margin: 0;
+//   padding: 0;
+//   border: none;
+//   background-color: transparent;
 // }
 
-// .menu-btn.is-open .menu-btn__icon-close {
+// .menu-btn--open.is-open .menu-btn--close {
 //   display: block;
 // }
 
-// .menu-btn.is-open .menu-btn__icon-menu {
-//   display: none;
-// }
+.menu-btn {
+  // position: absolute;
+  // top: 10px;
+  // right: 15px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+  // margin-top: 10px;
+  border: none;
+  background-color: transparent;
+  z-index: 5;
 
-// .menu-btn__icon-menu {
-//   // display: block;
-//   margin-left: auto;
-// }
-// .menu-btn__icon-close {
-//   // display: block;
-// }
+  &.is-open {
+    margin: 0;
+    margin-top: 10px;
+    margin-right: 15px;
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+.menu-btn .menu-btn__icon-close {
+  display: none;
+}
+
+.menu-btn.is-open .menu-btn__icon-close {
+  display: block;
+}
+
+.menu-btn.is-open .menu-btn__icon-menu {
+  display: none;
+}
 
 .mobile-menu__item {
   &:not(:last-child) {
@@ -104,18 +107,10 @@
   }
 }
 
-// .menu-btn__icon-close:hover,
-// .menu-btn__icon-close:focus,
-// .menu-btn__icon-menu:hover,
-// .menu-btn__icon-menu:focus {
-//   fill: var(--accent-color);
-// }
-
-.menu-btn__icon-close:hover,
-.menu-btn__icon-close:focus {
+.menu-btn:hover,
+.menu-btn:focus {
   fill: var(--accent-color);
 }
-
 .mobile-menu-socials {
   display: flex;
 
