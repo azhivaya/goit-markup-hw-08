@@ -22,7 +22,7 @@
     display: none;
   }
 }
-.menu-open-btn {
+.menu-btn--open {
   display: block;
   margin-left: auto;
   border: none;
@@ -31,6 +31,17 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+}
+
+.menu-btn--close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 // .menu-btn {
@@ -99,6 +110,11 @@
 // .menu-btn__icon-menu:focus {
 //   fill: var(--accent-color);
 // }
+
+.menu-btn__icon-close:hover,
+.menu-btn__icon-close:focus {
+  fill: var(--accent-color);
+}
 
 .mobile-menu-socials {
   display: flex;
