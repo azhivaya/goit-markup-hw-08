@@ -74,8 +74,13 @@ a {
   color: var(--accent-color);
   font-family: Raleway, sans-serif;
   font-weight: 700;
-  font-size: 26px;
+  font-size: 24px;
   line-height: 1.2;
+}
+@media screen and (min-width: 1199px) {
+  .logo {
+    font-size: 26px;
+  }
 }
 
 .logo--light {
@@ -93,6 +98,11 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media screen and (max-width: 767px) {
+  .header__container {
+    padding: 10px 0;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -184,6 +194,10 @@ a {
   color: var(--accent-color);
 }
 
+.mobile-menu__link--current {
+  color: var(--accent-color);
+}
+
 .mobile-menu-socials {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -213,6 +227,10 @@ a {
   color: var(--accent-color);
 }
 
+.mobile-contact__list {
+  margin-bottom: 64px;
+}
+
 .mobile-contact__item:not(:last-child) {
   margin-bottom: 32px;
 }
@@ -220,7 +238,7 @@ a {
 .mobile-contact__link {
   color: var(--secondary-text-color);
   font-weight: 500;
-  font-size: 34px;
+  font-size: 24px;
   line-height: calc 1.1764705882;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -230,6 +248,11 @@ a {
   color: var(--accent-color);
 }
 .mobile-contact__link:active {
+  color: var(--accent-color);
+}
+
+.mobile-contact__link--phone {
+  font-size: 34px;
   color: var(--accent-color);
 }
 
@@ -304,7 +327,7 @@ a {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .contact-nav__item:first-child {
     margin-bottom: 10px;
   }
@@ -358,6 +381,11 @@ a {
 .section--no-padding-top {
   padding-top: 0;
 }
+@media (max-width: 1199px) {
+  .section--no-padding-top {
+    display: none;
+  }
+}
 
 .section--dark-bgc {
   background-color: var(--filters-btn-bgc);
@@ -369,13 +397,13 @@ a {
   margin-bottom: 50px;
   color: var(--primary-text-color);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
   line-height: 1.17;
   text-align: center;
 }
-@media (max-width: 1199px) {
-  .section__title:first-child {
-    display: none;
+@media screen and (min-width: 1200px) {
+  .section__title {
+    font-size: 36px;
   }
 }
 
@@ -674,9 +702,6 @@ a {
       -ms-flex-align: center;
           align-items: center;
 }
-.team__item:nth-child(4n) {
-  margin-right: 0;
-}
 @media screen and (max-width: 767px) {
   .team__item:not(:last-child) {
     margin-bottom: 30px;
@@ -847,24 +872,21 @@ a {
             align-items: baseline;
   }
 }
-@media screen and (min-width: 1200px) {
-  .footer-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
-  }
-}
 
 @media screen and (max-width: 1199px) {
   .footer__sections {
     text-align: center;
   }
 }
-.footer__sections:not(:last-child) {
-  margin-bottom: 60px;
+@media screen and (max-width: 767px) {
+  .footer__sections:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer__sections:nth-child(3n) {
+    margin-top: 60px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer__sections {
@@ -1107,6 +1129,10 @@ a {
   }
 }
 
+.card-set__element {
+  height: 100%;
+}
+
 .card-set__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1165,7 +1191,6 @@ a {
 }
 
 .card-set__content {
-  height: 100%;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -1195,7 +1220,7 @@ a {
 }
 @media screen and (max-width: 767px) {
   .backdrop {
-    padding: 93px 15px;
+    padding: 15px;
   }
 }
 @media screen and (max-width: 1199px) {
@@ -1211,16 +1236,11 @@ a {
 }
 
 .modal {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  width: 100%;
   -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  width: 100%;
   visibility: visible;
   padding: 40px;
   background-color: var(--text-color-white);
@@ -1228,8 +1248,13 @@ a {
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 }
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 520px) {
   .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     width: 450px;
   }
 }

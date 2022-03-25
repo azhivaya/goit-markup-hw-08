@@ -23,6 +23,10 @@
   }
 }
 
+.card-set__element {
+  height: 100%;
+}
+
 .card-set__link {
   display: flex;
   flex-direction: column;
@@ -75,7 +79,6 @@
 }
 
 .card-set__content {
-  height: 100%;
   flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid var(--line-color);
